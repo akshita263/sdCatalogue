@@ -617,6 +617,9 @@ section .title::after{
 }
 
 @media (max-width: 950px ){
+    .navbar.sticky .logo{
+        padding-top: 2px;
+    }
     .max-width{
         padding: 0 50px;
     }
