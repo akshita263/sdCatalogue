@@ -37,30 +37,32 @@
 
     <section class="pictures" id="pictures">
         <div class="max-width">
-            <h2 class="title">Tables</h2>
+            <h2 class="title">Wallclocks</h2>
             <div class="picture-content">
                 <div class="row">
                     <div class="column">
-                        <div class="content">
+                      <div class="content">
                         <!-- Multiple pictures -->
-                            <div class="slideshow-container">
+                        <div class="slideshow-container">
 
-                                <div class="mySlides1 fade">
-                                <img src="../images/table/1a.jpeg" style="width:100%">
+                            <div class="mySlides fade">
+                              <img src="../images/clock/1a.jpeg" style="width:100%">
+                            </div>
+                            
+                            <div class="mySlides fade">
+                              <img src="../images/clock/1b.jpeg" style="width:100%">
+                            </div>
+                                                        
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            
+                                <div style="text-align:center">
+                                    <span class="dot" onclick="currentSlide(1)"></span> 
+                                    <span class="dot" onclick="currentSlide(2)"></span> 
                                 </div>
-                                
-                                <div class="mySlides1 fade">
-                                <img src="../images/table/1b.jpeg" style="width:100%">
-                                </div>                         
-                                                                
-                                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-                                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-                                            
-                                    <div style="text-align:center">
-                                        <span class="dot" onclick="currentSlide(1)"></span> 
-                                        <span class="dot" onclick="currentSlide(2)"></span> 
-                                    </div>
-                            </div>                          
+                            </div>
+                            
+                            
                             <h3>My Work</h3>
                             <p>Lorem ipsum dolor sit amet.</p>
                         </div>
@@ -68,41 +70,42 @@
 
 
                     <div class="column">
-                        <div class="content">
-                          <!-- Multiple pictures -->
-                          <div class="slideshow-container">
-  
-                              <div class="mySlides2 fade">
-                                <img src="../images/table/2a.jpeg" style="width:100%">
-                              </div>
-                              
-                              <div class="mySlides2 fade">
-                                <img src="../images/table/2b.jpeg" style="width:100%">
-                              </div>
+                      <div class="content">
+                        <div class="slideshow-container">
+                            <img src="../images/clock/2.jpeg" style="width:100%">
+                        </div>
+                        </br>
+                        <h3>My Work</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                      </div>
+                    </div>
 
-                              
-                              <div class="mySlides2 fade">
-                                <img src="../images/table/2c.jpeg" style="width:100%">
-                              </div>
-                                                                                        
-                                <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-                                <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-                              
-                                  <div style="text-align:center">
-                                      <span class="dot" onclick="currentSlide(1)"></span> 
-                                      <span class="dot" onclick="currentSlide(2)"></span> 
-                                      <span class="dot" onclick="currentSlide(3)"></span> 
-                                  </div>
-                              </div>
-                              
-                              
-                              <h3>My Work</h3>
-                              <p>Lorem ipsum dolor sit amet.</p>
-                          </div>
+
+                    <div class="column">
+                      <div class="content">
+                        <div class="slideshow-container">
+                            <img src="../images/clock/3.jpeg" style="width:100%">
+                        </div>
+                        </br>
+                        <h3>My Work</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                      </div>
+                    </div>
+
+
+                    <div class="column">
+                      <div class="content">
+                        <div class="slideshow-container">
+                            <img src="../images/clock/4.jpeg" style="width:100%">
+                        </div>
+                        </br>
+                        <h3>My Work</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                      </div>
                     </div>
 
                   <!-- END GRID -->
-                </div>
+                  </div>
             </div>
         </div>
 
@@ -173,25 +176,31 @@
 
     <script src="..\js\script.js"></script>
     <script>
-        var slideIndex = [1,1];
-        var slideId = ["mySlides1", "mySlides2"]
-        showSlides(1, 0);
-        showSlides(1, 1);
+        var slideIndex = 1;
+        showSlides(slideIndex);
 
-        function plusSlides(n, no) {
-        showSlides(slideIndex[no] += n, no);
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
         }
 
-        function showSlides(n, no) {
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
         var i;
-        var x = document.getElementsByClassName(slideId[no]);
-        if (n > x.length) {slideIndex[no] = 1}    
-        if (n < 1) {slideIndex[no] = x.length}
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
         }
-        x[slideIndex[no]-1].style.display = "block";  
-        
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
         }
     </script>
 </body>
