@@ -1,11 +1,13 @@
 $(document).ready(function(){
     $(window).scroll(function(){
+    //NAVBAR SCRIPT
         if(this.scrollY > 20){
             $('.navbar').addClass("sticky");
         }
         else{
             $('.navbar').removeClass("sticky");
         }
+    //SCROLL UP BUTTON SCRIPT
         if(this.scrollY > 380){
             $('.scroll-up-btn').addClass("show");
         }
@@ -24,7 +26,6 @@ $(document).ready(function(){
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
-
 
     //typing animation script
     var typed= new Typed(".typing", {
