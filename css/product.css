@@ -293,16 +293,20 @@ section .title::after{
 
 .contact .contact-content .row{
     display: flex;
-    height: 65px;
+    height: 75px;
     align-items: center;
     margin: 10px 0;
 }
 
 .contact .contact-content .row i{
-    font-size: 25px;
+    font-size: 28px;
     width: 45px;
     padding: 10px;
     color:#718390;
+}
+
+.fas .fa-user{
+    color: red;
 }
 
 .contact .contact-content .row .info{
