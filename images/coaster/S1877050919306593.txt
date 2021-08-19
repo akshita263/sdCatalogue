@@ -1,0 +1,11 @@
+Ravinder Ahuja, Aakarsha Chug, Shruti Kohli, Shaurya Gupta, Pratyush Ahuja,
+The Impact of Features Extraction on the Sentiment Analysis,
+Procedia Computer Science,
+Volume 152,
+2019,
+Pages 341-348,
+ISSN 1877-0509,
+https://doi.org/10.1016/j.procs.2019.05.008.
+(https://www.sciencedirect.com/science/article/pii/S1877050919306593)
+Abstract: In today’s world, everyone is expressive in one way or other. Many social websites and android applications whether being Facebook, WhatsApp or Twitter, in this highly advance and the modernized world is flooded with views and data. One of the most global and popular platforms is Twitter. This is seen as the main source of sentiments where almost every enthusiastic or social person tends to express his or her views in form of comments. These comments not only express the people but also give the understanding of their mood. Text present on these medias are unstructured in nature, so to process them firstly we need to pre-process, six pre-processing techniques are used and then features are extracted from the pre-processed data. There are so many feature extraction techniques such as Bag of Words, TF-IDF, word embedding, NLP(Natural Language Processing) based features like word count, noun count etc. In this paper we analysed the impact of two features TF-IDF word level and, N-Gram on SS-Tweet dataset of sentiment analysis. We found that by using TF-IDF word level (Term Frequency-Inverse Document Frequency) performance of sentiment analysis is 3-4% higher than using N-gram features, analysis is done using six classification algorithms(Decision Tree, Support vector Machine, K-Nearest Neighbour, Random Forest, Logistic Regression, Naive Bayes) and considering F-Score, Accuracy, Precision, and Recall performance parameters.
+Keywords: Accuracy; Classification; N-gram; TF-IDF; Sentiment; Twitter
